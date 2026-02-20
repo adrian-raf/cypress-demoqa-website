@@ -1,4 +1,4 @@
-# Technical Test - Cypress Automation
+# Cypress Automation - DemoQA Website
 
 This project contains automated end-to-e (E2E) tests using [Cypress](https://www.cypress.io/) for the [DemmoQA](https://demoqa.com) website.
 
@@ -15,7 +15,7 @@ This project contains automated end-to-e (E2E) tests using [Cypress](https://www
    ```
 2. Navigate to the project directory:
    ```bash
-   cd technicalTest-cypressAutomation-AdrianRaflyandri
+   cd <repository-folder>
    ```
 3. Install dependencies:
    ```bash
