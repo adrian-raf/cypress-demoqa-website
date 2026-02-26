@@ -2,23 +2,25 @@ import BasePage from "./BasePage";
 
 class DragDropPage extends BasePage {
     elements = {
-        dragBox: () => cy.get('#draggable'),
-        dropBox: () => cy.get('#droppable'),
+        dragBox: () => cy.get('#draggable').first(),
+        dropBox: () => cy.get('#simpleDropContainer #droppable'),
+        droppedMessage: () => cy.get('#simpleDropContainer #droppable > p')
+
     };
 
     navigateToDragDrop() {
         this.navigate('/');
         this.navigateToMenu('Interactions', 'Droppable');
-        cy.wait(500)
+        this.elements.dropBox().should('be.visible')
     }
 
     dragBoxToDropBox() {
-        this.elements.dragBox().drag('#droppable', { force: true })
+        cy.wait(1000);
+        this.elements.dragBox().drag('#simpleDropContainer #droppable', { force: true });
     }
 
-    get droppedMessage() {
-        return cy.contains('Dropped!');
-    }
+
+
 }
 
 
