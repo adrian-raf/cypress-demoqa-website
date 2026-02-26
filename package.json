@@ -2,7 +2,7 @@
   "scripts": {
     "cy:open": "cypress open",
     "test:ui": "cypress run --headed --no-exit --spec",
-    "test:headless": "cypress run --headless --spec",
+    "test:headless": "cypress run --headless --browser chrome --spec",
     "test:positive": "cypress run --expose grepTags=@positive,grepFilterSpecs=true",
     "test:negative": "cypress run --expose grepTags=@negative,grepFilterSpecs=true",
     "test:all": "cypress run"

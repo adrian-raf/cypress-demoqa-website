@@ -9,7 +9,7 @@ class DragDropPage extends BasePage {
     navigateToDragDrop() {
         this.navigate('/');
         this.navigateToMenu('Interactions', 'Droppable');
-        cy.wait(1000)
+        cy.wait(500)
     }
 
     dragBoxToDropBox() {
