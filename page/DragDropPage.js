@@ -15,7 +15,7 @@ class DragDropPage extends BasePage {
     }
 
     dragBoxToDropBox() {
-        cy.wait(1000);
+        cy.wait(1500);
         this.elements.dragBox().drag('#simpleDropContainer #droppable', { force: true });
     }
 
