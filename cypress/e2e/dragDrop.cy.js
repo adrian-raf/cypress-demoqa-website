@@ -1,4 +1,4 @@
-import { dragDropPage } from "../../page/dragDropPage";
+import { dragDropPage } from "../../page/DragDropPage";
 describe('Drag and Drop Test', () => {
     beforeEach(() => {
         dragDropPage.navigateToDragDrop();
