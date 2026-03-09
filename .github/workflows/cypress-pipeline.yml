@@ -31,4 +31,11 @@ jobs:
         if: always()
         with:
           name: cypress-html-report
-          path: cypress/reports/mochawesome-report
+          path: cypress/reports/html/
+
+      - name: Deploy Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: cypress/reports/html/
